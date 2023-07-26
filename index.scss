@@ -52,11 +52,11 @@ body {
     align-items: center;
 
     img {
-        width: 220px;
-        height: 260px;
+        width: 90%;
+        height: 30vh;
         border-radius: 10px;
-        margin: 10px;
         cursor: pointer;
+        object-fit: cover;
     }
 }
 
@@ -73,6 +73,7 @@ body {
         text-overflow: ellipsis;
         width: 220px;
         height: 54px;
+        margin: 10px 0px;
     }
 
     button {
@@ -93,7 +94,15 @@ body {
     }
 
 }
-
+.CardTitle {
+    margin-top: 10px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width: 200px;
+    font-weight: 900;
+    font-size: 1.4rem;
+}
 // Read Blog Page
 
 #blogReadPage {

@@ -17,9 +17,10 @@ function Card(image, title, cartInfo, blogWriting) {
     cardInfo.classList.add("card-info");
     card.appendChild(cardInfo);
 
-    const h3 = document.createElement("h3");
-    h3.innerText = title;
-    cardInfo.appendChild(h3);
+    const cardTitle = document.createElement("div");
+    cardTitle.innerText = title;
+    cardTitle.classList.add("CardTitle")
+    cardInfo.appendChild(cardTitle);
 
     const cardPara = document.createElement("p");
     cardPara.innerText = cartInfo;
