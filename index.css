@@ -1,0 +1,176 @@
+* {
+  padding: 0px;
+  margin: 0px;
+}
+
+body {
+  padding: 40px;
+  background: rgb(234, 234, 234);
+}
+
+#heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0px 60px 0px 20px;
+}
+#heading span {
+  font-size: 2rem;
+  font-weight: 900;
+  cursor: pointer;
+}
+
+.none {
+  display: none !important;
+}
+
+#container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.cards {
+  width: 240px;
+  height: 440px;
+  margin: 20px;
+  background: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid black;
+  border-radius: 10px;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.card img {
+  width: 220px;
+  height: 260px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.card-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.card-info p {
+  text-align: center;
+  color: rgb(92, 92, 92);
+}
+.card-info button {
+  width: 220px;
+  margin: 10px 0px;
+  background: #bbfece;
+  color: rgb(47, 29, 29);
+  outline: none;
+  border: none;
+  padding: 10px;
+  border-radius: 10px;
+  font-weight: 900;
+  cursor: pointer;
+}
+.card-info button:hover {
+  background: #bfbfbf;
+}
+.card-info h3 {
+  margin: 10px 0px;
+}
+
+#blogReadPage {
+  box-shadow: 0px 0px 10px 0px rgb(228, 187, 187);
+  border: 2px solid rgb(182, 182, 182);
+  width: 80%;
+  margin: 40px;
+  height: 70%;
+  border-radius: 10px;
+}
+
+.blog-info {
+  height: 35%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  background: blueviolet;
+  margin: 10px;
+  border-radius: 10px;
+  color: white;
+}
+.blog-info .blog-personal-detail {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 30vh;
+}
+.blog-info .blog-personal-detail h2 {
+  margin: 10px;
+}
+.blog-info .blog-personal-detail p {
+  margin: 10px;
+  width: 40vw;
+}
+.blog-info img {
+  width: 250px;
+  height: 200px;
+  border-radius: 10px;
+}
+
+.blog-detail {
+  padding: 30px;
+  color: #373737;
+}
+
+#addBlogPagePOP {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  width: 90%;
+}
+
+input,
+button,
+textarea {
+  display: block;
+  margin: 14px;
+  padding: 10px;
+  border-radius: 5px;
+  border: 2px solid rgb(174, 174, 174);
+  outline: none;
+  width: 80%;
+}
+
+button {
+  background: rgb(45, 45, 250);
+  width: 85%;
+}
+
+.addBlog {
+  box-shadow: 0px 0px 10px 0px black;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 60vh;
+  width: 25%;
+  border-radius: 10px;
+  background: #ffdfdf;
+  margin: 10px;
+}
+.addBlog a {
+  text-decoration: none;
+  color: black;
+  width: 80%;
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: end;
+  align-items: end;
+  font-weight: 900;
+  font-size: 1.4rem;
+}/*# sourceMappingURL=index.css.map */
