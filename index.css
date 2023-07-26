@@ -51,6 +51,7 @@ body {
   width: 220px;
   height: 260px;
   border-radius: 10px;
+  margin: 10px;
   cursor: pointer;
 }
 
@@ -63,6 +64,10 @@ body {
 .card-info p {
   text-align: center;
   color: rgb(92, 92, 92);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  width: 220px;
+  height: 54px;
 }
 .card-info button {
   width: 220px;
@@ -78,9 +83,6 @@ body {
 }
 .card-info button:hover {
   background: #bfbfbf;
-}
-.card-info h3 {
-  margin: 10px 0px;
 }
 
 #blogReadPage {
