@@ -131,7 +131,14 @@ document.getElementById("addBlogBtn").addEventListener("click", () => {
 
 popaddBlog();
 
-let arr = JSON.parse(localStorage.getItem("blogData")) || [];
+let arr = JSON.parse(localStorage.getItem("blogData")) || [
+    {
+        image: "https://edunewsnetwork.files.wordpress.com/2021/07/images-89.jpeg",
+        title: "Anime : The Global Fandom",
+        cartInfo: "Anime is hand-drawn and computer animation originating from Japan. In Japan and in Japanese, anime (a term derived from the English word animation) describes all animated works,",
+        blogWriting: "ntroduction Anime is hand-drawn and computer animation originating from Japan. In Japan and in Japanese, anime (a term derived from the English word animation) describes all animated works, regardless of style or origin. However, outside of Japan and in English, anime is colloquial for Japanese animation and refers specifically to animation produced in Japan.Animation produced outside of Japan with similar style to Japanese animation is referred to as anime-influenced animation.The earliest commercial Japanese animations date to 1917. A characteristic art style emerged in the 1960s with the works of cartoonist Osamu Tezuka and spread in following decades, developing a large domestic audience. Anime is distributed theatrically, through television broadcasts, directly to home media, and over the Internet. In addition to original works, anime are often adaptations of Japanese comics (manga), light novels, or video games. It is classified into numerous genres targeting various broad and niche audiences."
+    }
+];
 
 function addBlogDecrecption(title, image, cartInfo, blogWriting) {
     arr.push({
