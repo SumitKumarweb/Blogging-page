@@ -1,3 +1,4 @@
+
 function Card(image, title, cartInfo, blogWriting) {
     const container = document.getElementById("container");
 
@@ -39,6 +40,7 @@ function Card(image, title, cartInfo, blogWriting) {
 
 function readBlog(image, title, cartInfo, blogWriting) {
     const blogReadPage = document.getElementById("blogReadPage");
+    blogReadPage.innerHTML = ""
 
     const blogInfo = document.createElement("div");
     blogInfo.classList.add("blog-info");
@@ -156,3 +158,4 @@ function addBlogDecrecption(title, image, cartInfo, blogWriting) {
 arr.forEach((e) => {
     Card(e.image, e.title, e.cartInfo, e.blogWriting);
 });
+
