@@ -1,3 +1,19 @@
+const firebaseConfig = {
+    apiKey: "AIzaSyDmnD1a3VviyG4P37E_AE7PneaV6oq1RdM",
+    authDomain: "blogging-app-fcf45.firebaseapp.com",
+    databaseURL: "https://blogging-app-fcf45-default-rtdb.firebaseio.com",
+    projectId: "blogging-app-fcf45",
+    storageBucket: "blogging-app-fcf45.appspot.com",
+    messagingSenderId: "403337488783",
+    appId: "1:403337488783:web:63ae28f64676e77a6883fa",
+    measurementId: "G-7R8RVV4N49"
+};
+
+firebase.initializeApp(firebaseConfig);
+
+// Reference messages collection
+var messagesRef = firebase.database().ref('/messages/-NaKoOi8YnsNTSHTR5ux');
+
 
 function Card(image, title, cartInfo, blogWriting) {
     const container = document.getElementById("container");
@@ -40,7 +56,7 @@ function Card(image, title, cartInfo, blogWriting) {
 
 function readBlog(image, title, cartInfo, blogWriting) {
     const blogReadPage = document.getElementById("blogReadPage");
-    blogReadPage.innerHTML = ""
+    blogReadPage.innerHTML = "";
 
     const blogInfo = document.createElement("div");
     blogInfo.classList.add("blog-info");
@@ -143,19 +159,34 @@ let arr = JSON.parse(localStorage.getItem("blogData")) || [
 ];
 
 function addBlogDecrecption(title, image, cartInfo, blogWriting) {
-    arr.push({
+    var newMessageRef = messagesRef.push();
+    newMessageRef.set({
         image: image,
         title: title,
         cartInfo: cartInfo,
         blogWriting: blogWriting,
     });
-    localStorage.setItem("blogData", JSON.stringify(arr));
     document.getElementById("addBlogPagePOP").classList.add("none")
     document.getElementById("container").classList.remove("none");
 
 }
+const database = firebase.database();
 
-arr.forEach((e) => {
-    Card(e.image, e.title, e.cartInfo, e.blogWriting);
-});
+const dataRef = database.ref("/messages/-NaKoOi8YnsNTSHTR5ux");
 
+dataRef.once("value")
+  .then((snapshot) => {
+    const data = snapshot.val();
+    if (data) {
+      const arr = Object.values(data);
+      arr.forEach((e) => {
+        Card(e.image, e.title, e.cartInfo, e.blogWriting);
+      });
+    } else {
+      console.log("No data found.");
+    }
+  })
+  .catch((error) => {
+    // Handle the error gracefully
+    console.error("Error fetching:", error);
+  });
